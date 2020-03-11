@@ -1,0 +1,19 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'No test configured.'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yifanyang/javascript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yifanyang/javascript/issues"
+  },
+  "homepage": "https://github.com/yifanyang/javascript#readme"
+}
