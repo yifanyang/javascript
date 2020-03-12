@@ -25,3 +25,12 @@ fs.readFile(process.env.GITHUB_EVENT_PATH, 'utf8', (err, data) => {
   if (err) throw err;
   console.log(data);
 });
+
+if (process.env.GITHUB_EVENT_NAME === 'pull_request') {
+  const eventPayload = JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8'));
+  const pullRequestNumber = eventPayload.pull_request.number;
+  const baseCommitSha = eventPayload.pull_request.base.sha
+
+  console.log("pull request number:", pullRequestNumber);
+  console.log("base commit sha:", baseCommitSha);
+}
