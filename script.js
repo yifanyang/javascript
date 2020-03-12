@@ -1,5 +1,8 @@
 console.log("Testing with GitHub Actions ...");
 
+console.log();
+console.log();
+
 console.log("Home:", process.env.HOME);
 console.log("GITHUB_WORKFLOW:", process.env.GITHUB_WORKFLOW);
 console.log("GITHUB_RUN_ID:", process.env.GITHUB_RUN_ID);
