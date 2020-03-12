@@ -1,3 +1,5 @@
+const fs = require("fs");
+
 console.log("Testing with GitHub Actions ...");
 
 console.log();
@@ -18,3 +20,8 @@ console.log("GITHUB_SHA:", process.env.GITHUB_SHA);
 console.log("GITHUB_REF:", process.env.GITHUB_REF);
 console.log("GITHUB_HEAD_REF:", process.env.GITHUB_HEAD_REF);
 console.log("GITHUB_BASE_REF:", process.env.GITHUB_BASE_REF);
+
+fs.readFile(process.env.GITHUB_EVENT_PATH, 'utf8', (err, data) => {
+  if (err) throw err;
+  console.log(data);
+});
